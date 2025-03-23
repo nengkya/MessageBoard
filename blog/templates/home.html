@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+<!--
+%block content% allows you overiding or extending in child templates
+this is particularly useful for creating reusable and modular templates
+promoting the DRY (Don't Repeat Yourself) principle
+-->
+{% block content %}
+{% for post in object_list %}
+
+    <h2>
+	<a> {{ post.title }} </a>
+    </h2>
+
+    <p> {{ post.body }} </p>
+
+{% endfor %}
+{% endblock content %}
